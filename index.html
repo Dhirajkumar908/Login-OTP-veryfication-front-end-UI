@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>OTP veryfication</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="otp_container">
+            <div class="heading">Login You Accont</div>
+            <div class="login_details">
+                <div class="name_section">
+                    <label for="name">Name*</label>
+                    <input type="text" name="name" id="name" placeholder="Enter name">
+                </div>
+                <div class="email_section">
+                    <label for="email">Email*</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="pass_section">
+                    <label for="password">Password*</label>
+                    <input type="password" name="password" id="password" placeholder="Enter Password">
+                </div>
+               
+                <div class="sub_btn">
+                    <button id="submit">LOGIN</button>
+                </div>
+
+                 <!-- otp input section  -->
+                 <div class="otp_section", id="otp_main">
+                    <div class="otp_msg">Otp sent on you mail id <span id="msg_email"></span></div>
+                    <div class="get_otp_section">
+                        <p>OTP code ?</p>
+                        <input type="text" id="otp" placeholder="  0 0 0 0">
+                        <button id="verify">Verify</button>
+                        
+                    </div>
+                    <p class="error hidden">Invalid OTP!</p>
+                    <div class="otp_resend">
+                        <button class="resend_btn" >Resend OTP</button>
+                        <p class="resend_msg">You can resend in <span class="countdown">30</span>s</p>
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

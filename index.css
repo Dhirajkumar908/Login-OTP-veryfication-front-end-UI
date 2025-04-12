@@ -1,0 +1,106 @@
+*{
+    padding:0;
+    margin:0;
+    /* font-family:Arial, Helvetica, sans-serif; */
+}
+
+.main{
+    height: 100vh;
+    background-color: #5875A6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp_container{
+    width: 300px;
+    /* height: 400px; */
+    background-color: #A68959;
+    box-shadow: 0px 0px 8px 2px white;
+    border-radius: 20px;
+    padding:20px 20px 30px 20px;
+}
+
+.heading{
+    color:white;
+    text-align: center;
+    font-weight: 600;
+    font-size:25px;
+}
+
+.email_section, .pass_section, .name_section{
+    padding-top: 15px; 
+    color: white;
+    font-weight: 500;
+}
+
+#email, #password, #name{
+    width: 95%;
+    border-radius: 4px;
+    padding: 6px 0px 6px 5px;
+    border: none;
+    margin-top: 5px;
+}
+
+#submit{
+    border: none;
+    margin-top: 5px;
+    width: 97%;
+    padding: 6px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.otp_section{
+    padding-top: 10px;
+    display: none;
+}
+
+.otp_msg{
+    font-size: 12px;
+}
+
+.get_otp_section{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    gap:10px;
+    padding-top: 10px;
+    color:white;
+}
+#otp, #verify{
+    width: 56px;
+    padding: 6px 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* otp resend section style  */
+
+.otp_resend{
+    padding:20px 0px ;
+    display: flex;
+    gap:5px;
+}
+.resend_btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color:white;
+    
+}
+.resend_msg{
+    font-size: 14px;
+}
+
+
+.hidden{
+    display: none;
+    /* cursor: none; */
+}
+
+.error{
+    color: rgb(253, 0, 0);
+    font-size: 12px;
+}
