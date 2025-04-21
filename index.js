@@ -11,6 +11,8 @@ const otp_msg_email=document.getElementById('msg_email')
 const otp=document.getElementById('otp')
 const verifyBtn=document.getElementById('verify')
 const resendbtn=document.querySelector('.resend_btn')
+let IsRun=true;
+
 
 // user details 
 loginBtn.addEventListener('click', ()=>{
@@ -43,6 +45,9 @@ verifyBtn.addEventListener('click', ()=>{
         alert("OTP verify successfull")
         error.classList.add('hidden')
         console.log(`OTP: ${otpValue}`);
+        IsRun=false
+        countdown=document.querySelector('.countdown').remove()
+        timer=document.querySelector('.resend_msg').remove()
     }else{
         error.classList.remove('hidden')
     }
@@ -58,10 +63,11 @@ function resendOTP(){
     resendbtn.style.cursor='none'
 
     const interval=setInterval(()=>{
+       if (!IsRun) return
         timeleft--
         countdown.innerText=timeleft
         timer.classList.remove('hidden')
-
+        
         if (timeleft===0){
             clearInterval(interval);
             timer.classList.add("hidden");
